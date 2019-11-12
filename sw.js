@@ -21,12 +21,7 @@ workbox.routing.registerRoute(
   })
 );
 
-workbox.routing.registerRoute( 
-  // Cache JS files.
+workbox.routing.registerRoute(
   /\.js$/,
-  // Use cache but update in the background.
-  new workbox.strategies.StaleWhileRevalidate({
-    // Use a custom cache name.
-    cacheName: 'js-cache',
-  })
+  new workbox.strategies.NetworkFirst()
 );

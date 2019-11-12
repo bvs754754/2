@@ -20,11 +20,6 @@
 <link rel="apple-touch-icon"      sizes="152x152" href="icons/apple-icon-152x152.png">
 <link rel="apple-touch-icon"      sizes="180x180" href="icons/apple-icon-180x180.png">
 
-<link rel="icon" type="image/png" sizes="16x16"   href="icons/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32"   href="icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96"   href="icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="144x144" href="icons/android-icon-144x144.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
 
 <link rel="stylesheet" href="css/style2.css">
 
@@ -35,7 +30,7 @@
     <script>
 	  if ('serviceWorker' in navigator) {
 	    window.addEventListener('load', () => {
-	      navigator.serviceWorker.register('/sw.js')
+	      navigator.serviceWorker.register('sw.js')
 	        .then(registration => {
 	          console.log(`Service Worker registered! Scope: ${registration.scope}`);
 	        })
@@ -49,22 +44,9 @@
 
 
 
-    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="js/vue.min.js"></script>
+  
 
-
-    <link rel="stylesheet" href="katex/katex.min.css">
-    <script defer src="katex/katex.min.js"></script>
-    <script defer src="katex/auto-render.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    {left: "$", right: "$", display: false}
-                ]
-            });
-        });
-    </script>
+   
 
  
 </head>
@@ -97,39 +79,7 @@
   </div>
 
 			  
-			  <button class="add-button">Add to home screen</button>
-
-              <script>
-              // Code to handle install prompt on desktop
-              let deferredPrompt;
-              const addBtn = document.querySelector('.add-button');
-              addBtn.style.display = 'none';
-
-              window.addEventListener('beforeinstallprompt', (e) => {
-                // Prevent Chrome 67 and earlier from automatically showing the prompt
-                e.preventDefault();
-                // Stash the event so it can be triggered later.
-                deferredPrompt = e;
-                // Update UI to notify the user they can add to home screen
-                addBtn.style.display = 'block';
-
-                addBtn.addEventListener('click', (e) => {
-                  // hide our user interface that shows our A2HS button
-                  addBtn.style.display = 'none';
-                  // Show the prompt
-                  deferredPrompt.prompt();
-                  // Wait for the user to respond to the prompt
-                  deferredPrompt.userChoice.then((choiceResult) => {
-                      if (choiceResult.outcome === 'accepted') {
-                        console.log('User accepted the A2HS prompt');
-                      } else {
-                        console.log('User dismissed the A2HS prompt');
-                      }
-                      deferredPrompt = null;
-                    });
-                });
-              });
-              </script>
+			  
 
   
 </body>

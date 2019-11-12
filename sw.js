@@ -9,7 +9,10 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 
-workbox.routing.registerRoute( /\.js$/, new workbox.strategies.NetworkFirst() );
+workbox.routing.registerRoute(
+  new RegExp('/js/.*\\.js'),
+  handlerCb
+);
 
 workbox.routing.registerRoute( 
   // Cache CSS files.

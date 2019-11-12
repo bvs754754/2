@@ -36,7 +36,7 @@ workbox.precaching.precacheAndRoute([
        '/katex/fonts/KaTeX_Size4-Regular.woff',
        '/katex/fonts/KaTeX_Typewriter-Regular.woff',
        '/katex/fonts/KaTeX_AMS-Regular.woff2',
-	     '/katex/fonts/KaTeX_Caligraphic-Bold.woff2',
+       '/katex/fonts/KaTeX_Caligraphic-Bold.woff2',
 	     '/katex/fonts/KaTeX_Caligraphic-Regular.woff2',
 	     '/katex/fonts/KaTeX_Fraktur-Bold.woff2',
 	     '/katex/fonts/KaTeX_Fraktur-Regular.woff2',

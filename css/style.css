@@ -1,0 +1,212 @@
+
+
+
+
+html{
+	background:#FFFFFF;
+	background-size:100% 100%;
+	}
+/*div,p,h1,h2,h3,h4,h5,h6,a,span,ul,ol,li {outline: 1px dashed #ccc;}*/	
+
+
+body{
+font-family: Trebuchet MS,Helvetica,sans-serif,Verdana;
+font-size: 0.6em;
+  line-height: 1em;
+	}
+
+@media screen and (min-width: 20em) {
+  body {
+    font-size: calc(1em + (1.3125 - 1) * ((100vw - 20em) / (80 - 20)));
+    line-height: calc(1.4em + (1.8 - 1.4) * ((100vw - 20em) / (80 - 20)));
+  }
+}
+
+@media (min-width: 80em) {
+  body {
+    font-size: 1.3125em;
+    line-height: 1.8em;
+  }
+}
+
+
+
+
+.tab {
+	display: none;
+}
+
+.a1 { 
+	margin-top: 2%; border: 1px solid black; width: 99%; height: 60px; display: table; cursor: pointer;
+	/*-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;*/
+	background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f2f2f2),color-stop(0.38,#ccc),color-stop(0.67,#bcbcbc),color-stop(1,#c8c8c8));
+	background-image:-o-linear-gradient(bottom,#f2f2f2 0,#ccc 38%,#bcbcbc 67%,#c8c8c8 100%);
+	background-image:-moz-linear-gradient(bottom,#f2f2f2 0,#ccc 38%,#bcbcbc 67%,#c8c8c8 100%);
+	background-image:-webkit-linear-gradient(bottom,#f2f2f2 0,#ccc 38%,#bcbcbc 67%,#c8c8c8 100%);
+	background-image:-ms-linear-gradient(bottom,#f2f2f2 0,#ccc 38%,#bcbcbc 67%,#c8c8c8 100%);
+	background-image:linear-gradient(to bottom,#f2f2f2 0,#ccc 38%,#bcbcbc 67%,#c8c8c8 100%)
+	}
+.a1 span {display: table-cell; vertical-align: middle; padding: 5px;}
+
+
+.top-menu{
+	width:100%;
+	position:fixed;
+	top:0;
+	left: 0;
+	right:0;
+	z-index:100;
+	background:#FFFFFF;
+	height:35px;
+	}
+
+.top-menu ul{
+	text-align:justify;
+	margin:0;
+	padding:1px;	
+	overflow:hidden;
+	}
+
+.top-menu ul:after{
+	content:"";
+	width:100%;
+	display:inline-block;
+	}
+
+.top-menu ul li{
+	width:32%;
+	height:35px;
+	background:#FFA217;
+	outline:1px solid green;/*Толщина стиль и цвет рамки кнопок*/
+	display:inline-block;
+	text-align:center;
+	}
+
+
+.tab-title li{
+	cursor:pointer
+	}
+
+
+.top-menu li:hover{
+	background:#eee;/*Цвет фона при наведении на пункт*/
+	}
+
+.top-menu li a{
+	color:#222;/*Цвет шрифта в пункте*/
+	text-decoration:none;/*Убираем подчеркивание ссылки*/
+	display:block;/*Делаем ссылку блочным элементом*/
+	padding:5px 7px;/*Отступ для пункта*/
+	}	
+
+.content {margin-top:50px;}
+.tab {}
+#line1{height:100px;}
+
+.a21 {padding-top:65px}
+
+.info ul li { 
+	text-align:justify; 
+	}	
+.info ul li a{	
+	text-decoration:none;/*Убираем подчеркивание ссылки*/	
+	display:block;/*Делаем ссылку блочным элементом*/
+	padding:5px 7px;/*Отступ для пункта*/
+	}	
+
+
+
+.accordion {
+	width:100%; 
+	}
+/* секции аккордеона */
+.accordion .accordion_item {
+  margin-bottom:1px;
+  position:relative;
+	}
+/* заголовки панелей аккордеона */
+.accordion .title_block {
+	font-weight: 400;
+	font-size: 18px;
+	color: #eee;
+	cursor:pointer;
+	background: #009688;
+	padding:10px 10px 10px 10px;
+	-webkit-transition:all .2s linear 0;
+	-webkit-transition-delay:.2s 0;
+	transition:all .2s linear 0;
+	}
+/* переключатель панелей, положение вниз */
+.accordion .title_block:before {
+	content:'';
+	height:8px;
+	width:8px;
+	display:block;
+	border:2px solid #fefefe;
+	border-right-width:0;
+	border-top-width:0;
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	position:absolute;
+	right:20px;
+	top:18px;
+	}
+/* активный переключатель, положение вверх */
+.accordion .active_block .title_block:before {
+	border:2px solid #fefefe;
+	border-left-width:0;
+	border-bottom-width:0;
+	top:18px;
+	}
+.accordion .title_block:hover {
+	background: #26A69A;  
+	}
+ 
+/* заголовок активного блока  */
+.accordion .active_block .title_block {
+	background: #26A69A;
+	color:#fefefe;
+	}
+/* блоки с содержанием */
+.accordion .info {
+	display:none;
+	padding:2px;
+	overflow: hidden;
+	background:#f7f7f7;
+	font-size: 14px;
+	}
+
+
+.a111 {border-top: 1px solid;  padding-left:0px } /* */
+.s {display:none}
+.tabTheory {text-align:justify}
+
+.table-one {overflow:auto;}
+table {
+	border-collapse: collapse; 
+	border: solid grey; 
+	width:100%; 
+	border-spacing: 3px;
+	}
+th, td {
+	padding: 5px; 
+	border: 1px solid grey;
+	}
+th {
+	background: #D2CAC1;
+	}
+td {
+	text-align:left;
+	}
+
+
+.d1 {
+	text-decoration:none;/*Убираем подчеркивание ссылки*/	
+	}
+
+a {
+	text-decoration:none;/*Убираем подчеркивание у всех ссыло*/
+	}

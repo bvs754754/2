@@ -75,6 +75,6 @@ workbox.precaching.precacheAndRoute([
        "/katex/fonts/KaTeX_Size3-Regular.ttf",
        "/katex/fonts/KaTeX_Size4-Regular.ttf",
        "/katex/fonts/KaTeX_Typewriter-Regular.ttf",
-       "/css/style2.css"
+       "/css/style2.css",
 ]);
 
